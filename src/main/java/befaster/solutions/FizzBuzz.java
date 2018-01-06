@@ -17,8 +17,8 @@ public class FizzBuzz {
             return "fizz buzz fake deluxe";
         }
         
-        if ((number % 3 == 0 || containsThree(number)) && 
-                (number % 5 == 0 || containsFive(number)) &&
+        if ((number % 3 == 0 && containsThree(number)) && 
+                (number % 5 == 0 && containsFive(number)) &&
                 isDeluxe(number)) {
             return "fizz buzz deluxe";
         }
