@@ -35,4 +35,5 @@ public class FizzBuzzTest {
         assertThat(FizzBuzz.fizzBuzz(1), equalTo("1"));
     }
     
+    
 }

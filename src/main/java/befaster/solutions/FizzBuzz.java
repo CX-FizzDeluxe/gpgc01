@@ -6,15 +6,16 @@ public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
         
-        if (number % 3 == 0 && number % 5 == 0) {
+        if ((number % 3 == 0 || containsThree(number)) && 
+                (number % 5 == 0 || containsFive(number))) {
             return "fizz buzz";
         }
         
-        if (number % 3 == 0) {
+        if (number % 3 == 0 || containsThree(number)) {
             return "fizz";
         }
         
-        if (number % 5 == 0) {
+        if (number % 5 == 0 || containsFive(number)) {
             return "buzz";
         }
         
