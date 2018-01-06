@@ -7,6 +7,11 @@ public class FizzBuzz {
     public static String fizzBuzz(Integer number) {
         
         if ((number % 3 == 0 || containsThree(number)) && 
+                (number % 5 == 0 || containsFive(number))) {
+            return "fizz buzz";
+        }
+        
+        if ((number % 3 == 0 || containsThree(number)) && 
                 (number % 5 == 0 || containsFive(number)) &&
                 isFakeDeluxe(number)) {
             return "fizz buzz fake deluxe";
@@ -16,11 +21,6 @@ public class FizzBuzz {
                 (number % 5 == 0 || containsFive(number)) &&
                 isDeluxe(number)) {
             return "fizz buzz deluxe";
-        }
-        
-        if ((number % 3 == 0 || containsThree(number)) && 
-                (number % 5 == 0 || containsFive(number))) {
-            return "fizz buzz";
         }
         
         if ((number % 3 == 0 && containsThree(number)) && isFakeDeluxe(number)) {
