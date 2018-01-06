@@ -46,9 +46,9 @@ public class FizzBuzz {
             return "buzz";
         }
         
-        if (isFakeDeluxe(number)) {
-            return "fake deluxe";
-        }
+//        if (isFakeDeluxe(number)) {
+//            return "fake deluxe";
+//        }
         
 //        if (isDeluxe(number)) {
 //            return "deluxe";
