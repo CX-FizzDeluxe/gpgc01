@@ -21,7 +21,7 @@ public class FizzBuzz {
                 ||
                 ((number % 3 == 0 || containsThree(number)) && 
                 (number % 5 == 0 && containsFive(number))))) {
-            return "fizz buzz fake deluxe";
+            return "fizz buzz deluxe";
         }
         
         if ((number % 3 == 0 || containsThree(number)) && 
