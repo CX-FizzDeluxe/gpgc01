@@ -21,5 +21,13 @@ public class FizzBuzz {
         return number.toString();
         
     }
+    
+    private static boolean containsThree(Integer number) {
+        return number.toString().contains("3");
+    }
+    
+    private static boolean containsFive(Integer number) {
+        return number.toString().contains("5");
+    }
 
 }
