@@ -6,15 +6,14 @@ public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
         
-        if ((number % 3 == 0 || containsThree(number)) && 
-                (number % 5 == 0 || containsFive(number)) &&
+        if ((number % 3 == 0 && containsThree(number)) && 
+                (number % 5 == 0 && containsFive(number)) &&
                 isFakeDeluxe(number)) {
             return "fizz buzz fake deluxe";
         }
         
-        if ((number % 3 == 0 || containsThree(number)) && 
-                (number % 5 == 0 || containsFive(number)) &&
-                isDeluxe(number)) {
+        if ((number % 3 == 0 && containsThree(number)) && 
+                (number % 5 == 0 && containsFive(number))) {
             return "fizz buzz deluxe";
         }
         
@@ -23,21 +22,29 @@ public class FizzBuzz {
             return "fizz buzz";
         }
         
-        if ((number % 3 == 0 || containsThree(number)) && isFakeDeluxe(number)) {
+        
+        
+        
+        
+        if ((number % 3 == 0 && containsThree(number)) && isFakeDeluxe(number)) {
             return "fizz fake deluxe";
         }
         
-        if ((number % 3 == 0 || containsThree(number)) && isDeluxe(number)) {
+        if ((number % 3 == 0 && containsThree(number))) {
             return "fizz deluxe";
         }
         
-        if ((number % 5 == 0 || containsFive(number)) && isFakeDeluxe(number)) {
+        if ((number % 5 == 0 && containsFive(number)) && isFakeDeluxe(number)) {
             return "buzz fake deluxe";
         }
         
-        if ((number % 5 == 0 || containsFive(number)) && isDeluxe(number)) {
+        if ((number % 5 == 0 && containsFive(number))) {
             return "buzz deluxe";
         }
+        
+        
+        
+        
         
         if (number % 3 == 0 || containsThree(number)) {
             return "fizz";
@@ -51,9 +58,9 @@ public class FizzBuzz {
             return "fake deluxe";
         }
         
-        if (isDeluxe(number)) {
-            return "deluxe";
-        }
+//        if (isDeluxe(number)) {
+//            return "deluxe";
+//        }
         
         return number.toString();
         
