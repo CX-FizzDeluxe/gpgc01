@@ -8,6 +8,12 @@ public class FizzBuzz {
         
         if ((number % 3 == 0 || containsThree(number)) && 
                 (number % 5 == 0 || containsFive(number)) &&
+                isFakeDeluxe(number)) {
+            return "fizz buzz fake deluxe";
+        }
+        
+        if ((number % 3 == 0 || containsThree(number)) && 
+                (number % 5 == 0 || containsFive(number)) &&
                 isDeluxe(number)) {
             return "fizz buzz deluxe";
         }
@@ -17,8 +23,16 @@ public class FizzBuzz {
             return "fizz buzz";
         }
         
+        if ((number % 3 == 0 || containsThree(number)) && isFakeDeluxe(number)) {
+            return "fizz fake deluxe";
+        }
+        
         if ((number % 3 == 0 || containsThree(number)) && isDeluxe(number)) {
             return "fizz deluxe";
+        }
+        
+        if ((number % 5 == 0 || containsFive(number)) && isFakeDeluxe(number)) {
+            return "buzz fake deluxe";
         }
         
         if ((number % 5 == 0 || containsFive(number)) && isDeluxe(number)) {
@@ -31,6 +45,10 @@ public class FizzBuzz {
         
         if (number % 5 == 0 || containsFive(number)) {
             return "buzz";
+        }
+        
+        if (isFakeDeluxe(number)) {
+            return "fake deluxe";
         }
         
         if (isDeluxe(number)) {
