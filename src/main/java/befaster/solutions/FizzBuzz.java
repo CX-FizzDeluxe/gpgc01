@@ -17,12 +17,24 @@ public class FizzBuzz {
             return "fizz buzz";
         }
         
+        if ((number % 3 == 0 || containsThree(number)) && isDeluxe(number)) {
+            return "fizz deluxe";
+        }
+        
+        if ((number % 5 == 0 || containsFive(number)) && isDeluxe(number)) {
+            return "buzz deluxe";
+        }
+        
         if (number % 3 == 0 || containsThree(number)) {
             return "fizz";
         }
         
         if (number % 5 == 0 || containsFive(number)) {
             return "buzz";
+        }
+        
+        if (isDeluxe(number)) {
+            return "deluxe";
         }
         
         return number.toString();
