@@ -30,5 +30,22 @@ public class FizzBuzz {
     private static boolean containsFive(Integer number) {
         return number.toString().contains("5");
     }
+    
+    private static boolean isDeluxe(Integer number) {
+        if (number < 10) {
+            return false;
+        }
+        
+        char[] charArray = number.toString().toCharArray();
+        char auxChar = charArray[0];
+        
+        for (char tempChar : charArray) {
+            if (tempChar != auxChar) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
 
 }
