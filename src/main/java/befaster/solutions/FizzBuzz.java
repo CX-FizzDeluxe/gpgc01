@@ -65,5 +65,13 @@ public class FizzBuzz {
         
         return true;
     }
+    
+    private static boolean isFakeDeluxe(Integer number) {
+        if (isDeluxe(number) && number % 2 != 0) {
+            return true;
+        }
+        
+        return false;
+    }
 
 }
