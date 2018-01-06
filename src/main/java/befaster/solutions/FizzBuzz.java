@@ -22,10 +22,6 @@ public class FizzBuzz {
             return "fizz buzz";
         }
         
-        
-        
-        
-        
         if ((number % 3 == 0 && containsThree(number)) && isFakeDeluxe(number)) {
             return "fizz fake deluxe";
         }
@@ -41,10 +37,6 @@ public class FizzBuzz {
         if ((number % 5 == 0 && containsFive(number))) {
             return "buzz deluxe";
         }
-        
-        
-        
-        
         
         if (number % 3 == 0 || containsThree(number)) {
             return "fizz";
@@ -92,7 +84,7 @@ public class FizzBuzz {
     }
     
     private static boolean isFakeDeluxe(Integer number) {
-        if (isDeluxe(number) && number % 2 != 0) {
+        if (number % 2 != 0) {
             return true;
         }
         
